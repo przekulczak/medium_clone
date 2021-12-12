@@ -9,7 +9,12 @@ const ArticleListItems = () => {
     <ArticleListItem item={article} key={article.title} />
   ));
   const currentContent = loading ? <p>Loading</p> : content;
-  return <div>{currentContent}</div>;
+  return (
+    <div>
+      {currentContent}
+      <a>xd</a>
+    </div>
+  );
 };
 
 export default ArticleListItems;
