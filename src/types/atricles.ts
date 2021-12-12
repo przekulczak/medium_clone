@@ -1,4 +1,4 @@
-export interface ArticlesListItem {
+export interface ArticlesResListItem {
   slug: string;
   title: string;
   description: string;

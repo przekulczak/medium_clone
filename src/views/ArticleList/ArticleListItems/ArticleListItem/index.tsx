@@ -1,5 +1,6 @@
-import { ArticlesListItem } from "../../../../types/atricles";
 import { Link } from "react-router-dom";
+import Avatar from "components/Common/Avatar";
+// import { ArticlesListItem } from "../../../../types/atricles";
 
 interface Props {
   item: ArticlesListItem;
@@ -27,7 +28,7 @@ const ArticleListItem = ({ item: { title, description, author, createdAt, favori
   <div className="article-preview">
     <div className="article-meta">
       <a href="/#/profile/ericsimmons">
-        <img src={author.image} />
+        <Avatar url={author.image} />
       </a>
       <div className="info">
         <a href="/#/profile/ericsimmons" className="author">
