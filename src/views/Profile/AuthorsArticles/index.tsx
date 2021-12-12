@@ -1,9 +1,11 @@
+import { useParams } from "react-router-dom";
 import useSWR from "swr";
 import { ArticlesResListItem } from "types/atricles";
 import ArticleListItem from "../../../components/Common/ArticleListItem";
 
 const AuthorsArticleListItems = () => {
-  const { data: articles, error } = useSWR("/articles");
+  const { username } = useParams<{ username: string }>();
+  const { data: articles, error } = useSWR(`/articles?author=${username}`);
   const loading = !error && !articles;
   const content = articles?.articles.map((article: ArticlesResListItem) => (
     <ArticleListItem item={article} key={article.title} />
