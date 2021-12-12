@@ -1,8 +1,6 @@
 import { useForm } from "react-hook-form";
 import { useLoginForm } from "hooks/useLoginForm";
 
-// TO DO MOVE TO TYPES
-
 const LoginForm = () => {
   const {
     register,
