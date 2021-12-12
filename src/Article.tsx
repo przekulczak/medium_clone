@@ -14,18 +14,6 @@ export default function Article() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/#/editor">
-                <i className="ion-compose" />
-                &nbsp;New Article
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/#/settings">
-                <i className="ion-gear-a" />
-                &nbsp;Settings
-              </a>
-            </li>
-            <li className="nav-item">
               <a className="nav-link" href="/#/login">
                 Sign in
               </a>
