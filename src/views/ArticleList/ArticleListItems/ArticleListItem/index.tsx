@@ -1,29 +1,10 @@
 import { Link } from "react-router-dom";
 import Avatar from "components/Common/Avatar";
 import DateComponent from "components/Common/DateComponent";
-import { format } from "date-fns";
-// import { ArticlesListItem } from "../../../../types/atricles";
+import { ArticlesResListItem } from "../../../../types/atricles";
 
 interface Props {
-  item: ArticlesListItem;
-}
-
-export interface ArticlesListItem {
-  slug: string;
-  title: string;
-  description: string;
-  body: string;
-  tagList: string;
-  createdAt: string;
-  updatedAt: string;
-  favorited: true;
-  favoritesCount: number;
-  author: {
-    username: string;
-    bio: string;
-    image: string;
-    following: true;
-  };
+  item: ArticlesResListItem;
 }
 
 const ArticleListItem = ({ item: { title, description, author, createdAt, favoritesCount } }: Props) => (
