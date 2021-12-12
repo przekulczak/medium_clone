@@ -1,6 +1,18 @@
+import { useForm } from "react-hook-form";
 import { Topbar, Footer } from "components/Layout";
-
-export default function LoginRegister() {
+// TO DO MOVE TO VIEWS
+// TO DO MOVE FORM TO SEPARATE COMPONENT
+const LoginRegister = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const reqiureError = (
+    <ul className="error-messages">
+      <li>Field should not be empty</li>
+    </ul>
+  );
   return (
     <>
       <Topbar />
@@ -9,11 +21,6 @@ export default function LoginRegister() {
           <div className="row">
             <div className="col-md-6 offset-md-3 col-xs-12">
               <h1 className="text-xs-center">Sign in</h1>
-
-              <ul className="error-messages">
-                <li>That email is already taken</li>
-              </ul>
-
               <form>
                 <fieldset className="form-group">
                   <input className="form-control form-control-lg" type="text" placeholder="Email" />
@@ -31,4 +38,6 @@ export default function LoginRegister() {
       <Footer />
     </>
   );
-}
+};
+
+export default LoginRegister;
