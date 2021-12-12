@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import Avatar from "components/Common/Avatar";
+import DateComponent from "components/Common/DateComponent";
+import { format } from "date-fns";
 // import { ArticlesListItem } from "../../../../types/atricles";
 
 interface Props {
@@ -34,7 +36,7 @@ const ArticleListItem = ({ item: { title, description, author, createdAt, favori
         <a href="/#/profile/ericsimmons" className="author">
           {author.username}
         </a>
-        <span className="date">{createdAt}</span>
+        <DateComponent date={createdAt} />
       </div>
       <button className="btn btn-outline-primary btn-sm pull-xs-right">
         <i className="ion-heart" /> {favoritesCount}
