@@ -1,6 +1,7 @@
 import { FC } from "react";
 
 const FeedToggle: FC = () => (
+  // TO DO HANDLE FEED CHANGE IF LOGGED
   <div className="feed-toggle">
     <ul className="nav nav-pills outline-active">
       <li className="nav-item">

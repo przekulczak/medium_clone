@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Avatar from "components/Common/Avatar";
 import DateComponent from "components/Common/DateComponent";
-import { ArticlesResListItem } from "../../../../types/atricles";
+import { ArticlesResListItem } from "../../../types/atricles";
 
 interface Props {
   item: ArticlesResListItem;
@@ -14,7 +14,7 @@ const ArticleListItem = ({ item: { title, description, author, createdAt, favori
         <Avatar url={author.image} />
       </a>
       <div className="info">
-        <a href="/#/profile/ericsimmons" className="author">
+        <a href={`/#/profile/${author.username}`} className="author">
           {author.username}
         </a>
         <DateComponent date={createdAt} />

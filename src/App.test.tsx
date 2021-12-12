@@ -1,11 +1,12 @@
-import React from "react";
 import { rest } from "msw";
 import { setupServer } from "msw/node";
 import { render, screen, waitFor } from "@testing-library/react";
 import App from "./App";
 
+// TO DO  - test components separately
+
 const server = setupServer(
-  rest.get("/api/articles", (req, res, ctx) => {
+  rest.get("http://localhost:3000/api/articles", (req, res, ctx) => {
     return res(
       ctx.json({
         articles: [
@@ -74,6 +75,5 @@ test("renders Loading", () => {
 test("renders author name after fetch", async () => {
   render(<App />);
   await waitFor(() => screen.getAllByText(/alice/i)[0]);
-
   expect(screen.getAllByText(/alice/i)[0]).toBeInTheDocument();
 });

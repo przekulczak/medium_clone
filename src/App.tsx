@@ -2,11 +2,11 @@ import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { SWRConfig } from "swr";
 import { swrConfig } from "config/apiConfig";
 import Article from "./Article";
-import ArticleList from "./views/ArticleList/ArticleList";
+import { ArticleList, Profile } from "./views";
 import Editor from "./Editor";
 import LoginRegister from "./LoginRegister";
 import Logout from "./Logout";
-import Profile from "./Profile";
+
 import Settings from "./Settings";
 
 function App() {
