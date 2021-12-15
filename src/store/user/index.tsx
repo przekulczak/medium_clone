@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction, Action } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { UserDetails } from "types/user";
 
 export interface UserState {
