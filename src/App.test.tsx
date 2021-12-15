@@ -60,12 +60,6 @@ beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());
 afterAll(() => server.close());
 
-test("renders conduit link", () => {
-  render(<App />);
-  const linkElement = screen.getAllByText(/conduit/i)[0];
-  expect(linkElement).toBeInTheDocument();
-});
-
 test("renders Loading", () => {
   render(<App />);
   const linkElement = screen.getAllByText(/Loading/i)[0];
