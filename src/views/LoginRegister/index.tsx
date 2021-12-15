@@ -1,5 +1,6 @@
 import { Topbar, Footer } from "components/Layout";
 import Form from "./Form";
+
 const LoginRegister = () => {
   return (
     <>

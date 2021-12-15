@@ -1,10 +1,7 @@
 import axios from "axios";
 
-export const axiosInstance = axios.create({
-  baseURL: process.env.REACT_APP_BASE_URL,
-  headers: { Authorization: `` },
-});
+axios.defaults.baseURL = "http://localhost:3000/api/";
 
 export const swrConfig = {
-  fetcher: (url: string) => axiosInstance.get(url).then(res => res.data),
+  fetcher: (url: string) => axios.get(url).then(res => res.data),
 };

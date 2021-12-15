@@ -16,10 +16,6 @@ const AuthorInfo: FC = () => {
             <Avatar url={author?.profile?.image} user />
             <h4>{author?.profile.username}</h4>
             <p>{author?.profile.bio}</p>
-            <button className="btn btn-sm btn-outline-secondary action-btn">
-              <i className="ion-plus-round" />
-              &nbsp; {author?.profile.username}
-            </button>
           </div>
         </div>
       </div>

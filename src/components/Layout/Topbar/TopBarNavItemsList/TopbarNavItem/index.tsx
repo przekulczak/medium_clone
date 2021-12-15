@@ -1,14 +1,18 @@
 import { FC } from "react";
-import { TopBarNavItemType } from "../../../../../types/TopBarNavItemType";
 
-type Props = TopBarNavItemType;
+interface Props {
+  name: string;
+  href?: string;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
+}
 
-const TopbarNavItem: FC<Props> = ({ name, href }: Props) => {
+const TopbarNavItem: FC<Props> = ({ name, href, onClick }: Props) => {
   const { hash, pathname } = location;
   const isActive = `${pathname}${hash}` === href;
+  // TO DO USE BUTTON IF LOGOUT
   return (
-    <li className={`nav-item ${isActive ? "active" : ""}`}>
-      <a className="nav-link" href={href}>
+    <li className={`nav-item ${isActive ? "active" : ""}`} style={{ cursor: "pointer" }}>
+      <a className="nav-link" href={href} onClick={onClick}>
         {name}
       </a>
     </li>
